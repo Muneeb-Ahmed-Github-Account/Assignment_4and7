@@ -1,101 +1,66 @@
-import Image from "next/image";
-
-export default function Home() {
+import ProjectCard from "@/components/ProjectCard";
+import { TiArrowDown } from "react-icons/ti";
+import project1 from "../../public/images/ecommerce.jpg"
+import project2 from "../../public/images/portfolio1.jpg"
+import project3 from "../../public/images/resume.jpg"
+export default function Work() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* hero section starts */}
+
+      <div className="flex md:flex-row flex-col md:px-20 px-10 md:items-center justify-center sm:h-[70vh] h-[50vh] lg:gap-16 gap-8">
+      <div className="">
+      <h1 className="lg:text-6xl md:text-5xl sm:text-6xl text-4xl mr-5 font-semibold text-[#181717]">
+        Hello, I&apos;m <br /> Muneeb Ahmed.
+      </h1>
+      </div>
+      <div className=" flex text-xl md:mt-24">
+        <p className="font-semibold text-[#606060]">A Senior Web Development Student with the strong grip <br /> on Front-end web designing and development.</p>
+      </div>
+      </div>
+        <div className="md:px-20 px-10 sm:-mt-10 md:mb-36">
+          <p className="sm:text-5xl text-3xl font-extrabold ">
+          <TiArrowDown />
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+   
+      {/* 1st Card  */}
+
+        <ProjectCard 
+        cardNo="01"
+        cardTitle="E-Commerce-Website"
+        cardParagraph="This is a E-commerce website."
+        cardSpan="I built a user-friendly e-commerce website with a smooth shopping experience, secure payments, and responsive design. It features an easy-to-navigate product catalog, simple checkout, and seamless user authentication, showcasing my skills in web development and UI/UX design."
+        cardLink="More shots from This Project"
+        cardImage={project1}
+        />
+
+        <hr className="w-[88%] mx-auto h-0.5 bg-[#181717]" />
+
+        {/* 2nd card  */}
+
+        <ProjectCard 
+        cardNo="02"
+        cardTitle="Portfolio Website"
+        cardParagraph="Personal Portfolio Website using Next.js and tailwind "
+        cardSpan="I developed a personal portfolio website using Next.js, showcasing my skills in web development. The website features a clean, responsive design with smooth navigation, fast loading times, and a dynamic layout, reflecting my expertise in building modern, high-performance web applications."
+        cardLink="More shots from This Project "
+        cardImage={project2}/>
+        <hr className="w-[88%] mx-auto h-0.5 bg-[#181717]" />
+        {/* 3rd card  */}
+
+        <ProjectCard 
+        cardNo="03"
+        cardTitle="Resume Builder"
+        cardParagraph="This is my personal portfolio which I created with HTML CSS and JavaScript."
+        cardSpan="I developed a Resume Builder using HTML, CSS, and JavaScript. This tool allows users to create and customize professional resumes. It offers an intuitive interface to input personal information and work experience. The final resume can be downloaded in a clean, professional format."
+        cardLink="More shots from This Project "
+        cardImage={project3}/>
+         <hr className="w-[88%] mx-auto h-0.5 bg-[#181717]" />
+        
+
+
     </div>
   );
 }
